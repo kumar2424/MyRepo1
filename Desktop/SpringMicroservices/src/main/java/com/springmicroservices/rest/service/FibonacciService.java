@@ -1,4 +1,4 @@
-package com.springmicroservices.rest.fibonacci;
+package com.springmicroservices.rest.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,11 +19,11 @@ public class FibonacciService {
 	
 	public Integer fibonacciCalculator(int fibonacciNumber) {
 		int fibonacciValue=0;
-		log.info("Calculating fibonacci series upto "+fibonacciNumber);
+		log.info("Calculating fibonacci series upto ",fibonacciNumber);
 		for(int i=1;i<=fibonacciNumber;i++) {
 			fibonacciValue= calculateFibonacci(i);
 		}
-		log.info("Calculated fibonacci number is "+fibonacciValue);
+		log.info("Calculated fibonacci number is ",fibonacciValue);
 		return fibonacciValue;
 		
 	}

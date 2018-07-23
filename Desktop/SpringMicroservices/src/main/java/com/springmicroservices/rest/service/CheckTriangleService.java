@@ -1,4 +1,4 @@
-package com.springmicroservices.rest.triangle;
+package com.springmicroservices.rest.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,8 +14,7 @@ public class CheckTriangleService {
 		if((side1==side2) && (side2==side3))
         {
 			triangletype="Equilateral";
-        }//if
-
+        }
         //To check to see if it is an Isosceles triangle (2 of the same size and 1 different)
         else if ((side1 == side2) & (side2 != side3) || (side2 == side3) & (side3!= side1))
         {
@@ -26,9 +25,8 @@ public class CheckTriangleService {
         else if((side1 != side2) & (side2 != side3))
         {
         	triangletype="Scalene";
-        }//else if
-		log.info("Triangle type is "+triangletype);
+        }
+		log.info("Triangle type is ",triangletype);
 		return triangletype;
-
 	}
 }
